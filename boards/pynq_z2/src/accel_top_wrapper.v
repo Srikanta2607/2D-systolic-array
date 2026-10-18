@@ -15,8 +15,8 @@ module accel_top_wrapper #(
     parameter integer TILE_K          = 16,
     parameter integer DATA_WIDTH      = 8,
     parameter integer ACC_WIDTH       = 20,
-    parameter integer DSP_PE_LIMIT_0  = 110,
-    parameter integer DSP_PE_LIMIT_1  = 110,
+    parameter integer DSP_PE_LIMIT_0  = 64,
+    parameter integer DSP_PE_LIMIT_1  = 64,
     parameter integer AXI_ADDR_WIDTH  = 32,
     parameter integer AXI_DATA_WIDTH  = 32,
     parameter integer AXIS_DATA_WIDTH = 32

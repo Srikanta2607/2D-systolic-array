@@ -11,7 +11,7 @@ module dual_systolic_array #(
     parameter int ARRAY_COLS     = 16,
     parameter int DATA_WIDTH     = 8,
     parameter int ACC_WIDTH      = 32,
-    parameter int DSP_PE_LIMIT   = 110,
+    parameter int DSP_PE_LIMIT   = 64,
     parameter int DSP_PE_LIMIT_0 = DSP_PE_LIMIT,
     parameter int DSP_PE_LIMIT_1 = DSP_PE_LIMIT,
     parameter bit MASK_AT_INGRESS = 1'b0,

@@ -4,8 +4,7 @@ echo ======================================================================
 echo   OPENING ADAPTIVE SYSTOLIC ARRAY HARDWARE WEB LAB
 echo ======================================================================
 echo.
-echo Target PYNQ-Z2 Address: http://192.168.2.99:8765/
-echo Hardware Status: 512 MACs, 220 DSPs (Dual-Engine GEMM Accelerator)
+echo Hardware Status: 512 MACs, 128 DSPs (0.735W Ultra-Low Power Dual-Engine GEMM)
 echo.
 echo Launching your default browser...
 start http://192.168.2.99:8765/

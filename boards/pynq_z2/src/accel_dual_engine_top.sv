@@ -24,8 +24,8 @@ module accel_dual_engine_top #(
     parameter int TILE_K          = 16,
     parameter int DATA_WIDTH      = 8,
     parameter int ACC_WIDTH       = 20,
-    parameter int DSP_PE_LIMIT_0  = 110,
-    parameter int DSP_PE_LIMIT_1  = 110,
+    parameter int DSP_PE_LIMIT_0  = 64,
+    parameter int DSP_PE_LIMIT_1  = 64,
     parameter int AXI_ADDR_WIDTH  = 32,
     parameter int AXI_DATA_WIDTH  = 32,
     parameter int AXIS_DATA_WIDTH = 32
