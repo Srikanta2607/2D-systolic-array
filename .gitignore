@@ -42,6 +42,8 @@ venv/
 # ==========================
 # Vivado Simulation Work Output
 # ==========================
+.Xil/
+vivado_build/
 sim_work_*/
 boards/pynq_z2/pynq_z2_vivado_proj/
 simulation/work/
@@ -53,6 +55,7 @@ simulation/vivado_bd_proj/
 *.wcfg
 dfx_runtime.txt
 *.debug
+
 
 # ==========================
 # OS Files

@@ -16,7 +16,7 @@ module accel_dual_axi_top #(
     parameter int AXI_ADDR_WIDTH = 32,
     parameter int AXI_DATA_WIDTH = 32,
     parameter int AXIS_DATA_WIDTH = 32,
-    parameter int DSP_PE_LIMIT = 110
+    parameter int DSP_PE_LIMIT = 64
 )(
     input wire clk,
     input wire rst_n,

@@ -9,3 +9,8 @@ set_input_delay -clock core_clk -max 1.000 [get_ports -filter {DIRECTION == IN &
 set_input_delay -clock core_clk -min 0.000 [get_ports -filter {DIRECTION == IN && NAME != clk} *]
 set_output_delay -clock core_clk -max 1.000 [get_ports -filter {DIRECTION == OUT} *]
 set_output_delay -clock core_clk -min 0.000 [get_ports -filter {DIRECTION == OUT} *]
+
+# Relax artificial hold checks on OOC boundary ports
+set_false_path -hold -from [get_ports -filter {DIRECTION == IN && NAME != clk} *]
+set_false_path -hold -to [get_ports -filter {DIRECTION == OUT} *]
+

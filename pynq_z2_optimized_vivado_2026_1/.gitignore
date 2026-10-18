@@ -1,0 +1,16 @@
+# Vivado-generated project products and simulator artifacts
+vivado/build/
+vivado_build/
+.Xil/
+*.jou
+*.log
+*.wdb
+*.vcd
+*.dcp
+*.bit
+*.ltx
+*.sdb
+*.obj
+*.exe
+*.dbg
+

@@ -10,9 +10,9 @@ module accel_dual_tile_core #(
     parameter int TILE_K         = 16,
     parameter int DATA_WIDTH     = 8,
     parameter int ACC_WIDTH      = 32,
-    parameter int DSP_PE_LIMIT_0 = 110,
-    parameter int DSP_PE_LIMIT_1 = 110,
-    parameter int DSP_PE_LIMIT   = 110
+    parameter int DSP_PE_LIMIT_0 = 64,
+    parameter int DSP_PE_LIMIT_1 = 64,
+    parameter int DSP_PE_LIMIT   = 64
 )(
     input  wire                                      clk,
     input  wire                                      rst_n,
