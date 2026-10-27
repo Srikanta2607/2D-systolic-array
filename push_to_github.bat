@@ -1,4 +1,5 @@
 @echo off
+cd /d "%~dp0"
 title Push Latest Work to GitHub (Srikanta2607)
 echo ============================================================
 echo   Pushing Optimized 2D Systolic Array to GitHub
