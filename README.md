@@ -102,6 +102,12 @@ Edge AI neural network layers (Convolutions, Dense Layers, Attention projections
 <p align="center">
   <img src="assets/system_architecture_diagram.png" alt="System Architecture and Workflow" width="900"/>
 </p>
+<p align="center">
+  <img src="assets/Architectuer.png" alt="Detailed 2D Systolic Array Hardware Architecture" width="900"/>
+</p>
+<p align="center">
+  <em>Figure 2: Complete Dual-Engine 2D Systolic Array Processing Mesh & Control Subsystem</em>
+</p>
 
 ### Architecture Hierarchy & Dataflow
 
@@ -366,6 +372,22 @@ webpage\OPEN_WEBPAGE.bat
 ```bat
 applications\hand_gesture\START_HARDWARE_GESTURE_DEMO.bat
 ```
+
+---
+
+## 📚 Research Foundations & Literature Survey
+
+The architecture and power optimization techniques in this repository build upon and extend the following foundational literature (archived in [`research_papers/`](./research_papers/)):
+
+| Category | Key Citations & Papers | Architectural Influence in DASA |
+|---|---|---|
+| **Systolic Foundations & Spatial TPU Arrays** | • [Jouppi et al. (2017) Google TPU v1](./research_papers/04_Jouppi2017_TPUv1.pdf)<br/>• [Jouppi et al. (2023) Google TPU v4](./research_papers/05_Jouppi2023_TPUv4.pdf)<br/>• Kung & Leiserson (1978) *Systolic Arrays for VLSI* | Dual 2D matrix spatial execution model, triangular skew buffers for cycle-aligned wave-front data ingestion. |
+| **Dataflow & Dynamic Data Gating** | • [Chen et al. (2019) Eyeriss v2: Flexible DNN Accelerator](./research_papers/06_Chen2019_EyerissV2.pdf)<br/>• Chen et al. (2016) *Eyeriss: Spatial Energy-Efficient Architecture* | Local clock and operand isolation in `pe_mac.sv` (`a_q`, `b_q` clamped to zero when inactive) cutting dynamic switching power by **-69%**. |
+| **FPGA DSP Optimization & Placement** | • [Li et al. (2024) In-DSP Multiplexing](./research_papers/16_Li2024_InDSP_Multiplexing.pdf)<br/>• [Chan et al. (2022) Parallelism-Aware Partitioning](./research_papers/19_Chan2022_KnapsackPlacement.pdf) | Hybrid DSP/LUT allocation (64 DSPs + 192 carry-chain LUT MACs per engine), reducing DSP slice consumption to **58.18% (128 DSPs)** and freeing 92 DSP slices for Zynq PL logic. |
+| **Adaptive GEMM & Variable Arrays** | • [Helal et al. (2025) VUSA: Virtually Upscaled Systolic Array](./research_papers/12_Helal2025_VUSA.pdf)<br/>• [Genc et al. (2021) Gemmini](./research_papers/09_Genc2021_Gemmini.pdf)<br/>• [Qin et al. (2020) SIGMA Sparse & Irregular GEMM](./research_papers/08_Qin2020_SIGMA.pdf) | Dynamic active masking supporting irregular tile dimensions without pipeline stalls or padding bubbles. |
+| **System Evaluation & Simulation** | • [Samajdar et al. (2020) SCALE-Sim](./research_papers/10_Samajdar2020_SCALESim.pdf)<br/>• [Palacios et al. (2024) Edge Transformers](./research_papers/14_Palacios2024_EdgeTransformers.pdf)<br/>• [Alexakis et al. (2026) MPX Unified Systolic Array](./research_papers/EXTRA_Alexakis2026_MPX_UnifiedSystolicArray.pdf) | Multi-tile loop-tiling controller and cycle-accurate regression verification across 10 hardware testbench suites. |
+
+> Complete index of all 25 surveyed papers and open-access extensions can be explored in [`research_papers/README.md`](./research_papers/README.md).
 
 ---
 

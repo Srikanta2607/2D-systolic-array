@@ -66,6 +66,8 @@ desktop.ini
 *.swp
 *.swo
 *~
+Screenshot*.png
+Screenshot*
 
 # ==========================
 # IDE / Editor Files
